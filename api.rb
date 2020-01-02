@@ -56,6 +56,6 @@ class API
   end
 
   def token
-    YAML.load_file('secrets.yml')['token']
+    YAML.load_file("#{File.expand_path(File.dirname(__FILE__))}/secrets.yml")['token']
   end
 end
